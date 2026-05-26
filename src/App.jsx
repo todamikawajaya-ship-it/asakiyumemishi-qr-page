@@ -1,3 +1,5 @@
+import logo from './assets/logo.png'
+
 export default function AsakiyumemishiQrLandingPage() {
   const limitedContentHref = "https://drive.google.com/drive/folders/1jdgIG6OTmzWQozvAVY_WOHsfOzQtgDHH?usp=drive_link";
 
@@ -45,7 +47,7 @@ export default function AsakiyumemishiQrLandingPage() {
         body { margin: 0; }
         .aym-page {
           min-height: 100vh;
-          background: linear-gradient(180deg, #fff7ed 0%, #ffffff 45%, #fdf2f8 100%);
+          background: linear-gradient(180deg, #ecfeff 0%, #ffffff 42%, #fff7ed 100%);
           color: #18181b;
           font-family: Arial, Helvetica, sans-serif;
         }
@@ -55,7 +57,7 @@ export default function AsakiyumemishiQrLandingPage() {
           padding: 16px 14px 28px;
         }
         .aym-card {
-          background: #fff;
+          background: rgba(255,255,255,0.96);
           border: 1px solid #e4e4e7;
           border-radius: 24px;
           box-shadow: 0 12px 36px rgba(0,0,0,0.05);
@@ -63,16 +65,19 @@ export default function AsakiyumemishiQrLandingPage() {
         .aym-header {
           position: relative;
           overflow: hidden;
-          border: 1px solid #fed7aa;
-          border-radius: 24px;
-          padding: 20px;
-          background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(255,247,237,0.98));
+          border: 1px solid rgba(34, 211, 238, 0.28);
+          border-radius: 28px;
+          padding: 18px;
+          background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(236,254,255,0.98));
           box-shadow: 0 18px 48px rgba(0,0,0,0.08);
         }
         .aym-header-glow {
           position: absolute;
           inset: 0;
-          background: radial-gradient(circle at top right, rgba(249,115,22,0.18), transparent 28%), radial-gradient(circle at left, rgba(236,72,153,0.16), transparent 32%), radial-gradient(circle at bottom, rgba(59,130,246,0.10), transparent 28%);
+          background:
+            radial-gradient(circle at top right, rgba(34,211,238,0.16), transparent 28%),
+            radial-gradient(circle at 15% 30%, rgba(249,115,22,0.14), transparent 30%),
+            radial-gradient(circle at bottom, rgba(56,189,248,0.10), transparent 28%);
           pointer-events: none;
         }
         .aym-nav {
@@ -81,47 +86,51 @@ export default function AsakiyumemishiQrLandingPage() {
           display: flex;
           flex-wrap: wrap;
           gap: 8px 10px;
-          margin-bottom: 14px;
+          margin-bottom: 16px;
         }
         .aym-nav a {
           text-decoration: none;
-          color: #71717a;
+          color: #52525b;
           font-size: 10px;
           font-weight: 800;
           letter-spacing: .16em;
           text-transform: uppercase;
-          background: rgba(255,255,255,.72);
+          background: rgba(255,255,255,.76);
           border: 1px solid #f4f4f5;
           border-radius: 999px;
           padding: 7px 10px;
+        }
+        .aym-logo-wrap {
+          position: relative;
+          z-index: 1;
+          display: flex;
+          justify-content: center;
+          margin-bottom: 10px;
+        }
+        .aym-logo {
+          display: block;
+          width: min(100%, 540px);
+          height: auto;
+          filter: drop-shadow(0 8px 18px rgba(0,0,0,0.08));
         }
         .aym-badge {
           position: relative;
           z-index: 1;
           display: inline-block;
-          background: #ffedd5;
-          color: #ea580c;
+          background: linear-gradient(90deg, #cffafe 0%, #ffedd5 100%);
+          color: #0f172a;
           font-size: 11px;
           font-weight: 800;
           letter-spacing: .16em;
           text-transform: uppercase;
           border-radius: 999px;
           padding: 8px 12px;
-        }
-        .aym-title {
-          position: relative;
-          z-index: 1;
-          margin: 14px 0 12px;
-          font-size: 42px;
-          line-height: .95;
-          font-weight: 900;
-          letter-spacing: -.05em;
-          word-break: break-word;
+          border: 1px solid rgba(34,211,238,0.18);
         }
         .aym-lead {
           position: relative;
           z-index: 1;
-          margin: 0;
+          margin: 14px 0 0;
           font-size: 15px;
           line-height: 1.9;
           color: #3f3f46;
@@ -140,7 +149,7 @@ export default function AsakiyumemishiQrLandingPage() {
           align-items: center;
           justify-content: center;
           width: 100%;
-          min-height: 52px;
+          min-height: 54px;
           border-radius: 18px;
           text-decoration: none;
           font-size: 15px;
@@ -149,14 +158,14 @@ export default function AsakiyumemishiQrLandingPage() {
           padding: 14px 18px;
         }
         .aym-btn-primary {
-          background: linear-gradient(90deg, #f97316 0%, #ec4899 100%);
+          background: linear-gradient(90deg, #22d3ee 0%, #f97316 100%);
           color: #fff;
-          box-shadow: 0 16px 32px rgba(249,115,22,0.28);
+          box-shadow: 0 16px 32px rgba(34,211,238,0.22);
         }
         .aym-btn-secondary {
           background: #fff;
           color: #18181b;
-          border: 1px solid #e4e4e7;
+          border: 1px solid #d4d4d8;
         }
         .aym-section {
           margin-top: 18px;
@@ -165,13 +174,13 @@ export default function AsakiyumemishiQrLandingPage() {
         .aym-hot {
           margin-top: 18px;
           overflow: hidden;
-          border: 1px solid #fed7aa;
+          border: 1px solid rgba(34,211,238,0.26);
           border-radius: 24px;
           background: #fff;
           box-shadow: 0 18px 48px rgba(0,0,0,0.06);
         }
         .aym-hot-head {
-          background: linear-gradient(90deg, #f97316 0%, #ec4899 65%, #f59e0b 100%);
+          background: linear-gradient(90deg, #22d3ee 0%, #38bdf8 42%, #f97316 100%);
           color: #fff;
           padding: 18px 20px;
         }
@@ -183,7 +192,7 @@ export default function AsakiyumemishiQrLandingPage() {
           font-weight: 800;
           letter-spacing: .22em;
           text-transform: uppercase;
-          color: #f97316;
+          color: #0891b2;
           margin-bottom: 8px;
         }
         .aym-kicker-white {
@@ -191,12 +200,12 @@ export default function AsakiyumemishiQrLandingPage() {
           font-weight: 800;
           letter-spacing: .22em;
           text-transform: uppercase;
-          color: rgba(255,255,255,.82);
+          color: rgba(255,255,255,.85);
           margin-bottom: 8px;
         }
         .aym-h2 {
           margin: 0;
-          font-size: 32px;
+          font-size: 30px;
           line-height: 1.08;
           font-weight: 900;
           letter-spacing: -.04em;
@@ -210,8 +219,8 @@ export default function AsakiyumemishiQrLandingPage() {
         .aym-inner-card {
           margin-top: 16px;
           border-radius: 22px;
-          border: 1px solid #fed7aa;
-          background: linear-gradient(135deg, #fff7ed 0%, #fdf2f8 100%);
+          border: 1px solid rgba(34,211,238,0.20);
+          background: linear-gradient(135deg, #ecfeff 0%, #fff7ed 100%);
           padding: 18px;
         }
         .aym-grid {
@@ -227,7 +236,7 @@ export default function AsakiyumemishiQrLandingPage() {
           border: 1px solid #e4e4e7;
           border-radius: 22px;
           padding: 18px;
-          background: linear-gradient(180deg, #ffffff 0%, #fffaf7 100%);
+          background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
           box-shadow: 0 10px 28px rgba(0,0,0,0.04);
         }
         .aym-song-kicker {
@@ -263,14 +272,14 @@ export default function AsakiyumemishiQrLandingPage() {
         }
         @media (min-width: 768px) {
           .aym-container { padding: 24px 20px 40px; }
-          .aym-header { padding: 28px; border-radius: 28px; }
-          .aym-title { font-size: 56px; }
+          .aym-header { padding: 28px; border-radius: 30px; }
           .aym-button-row { flex-direction: row; }
           .aym-btn-primary, .aym-btn-secondary { width: auto; min-width: 240px; }
           .aym-section, .aym-hot-body { padding: 28px; }
           .aym-hot-head { padding: 22px 28px; }
           .aym-h2 { font-size: 40px; }
           .aym-grid.socials { grid-template-columns: repeat(3, 1fr); }
+          .aym-logo { width: min(100%, 680px); }
         }
       `}</style>
       <div className="aym-page">
@@ -284,8 +293,12 @@ export default function AsakiyumemishiQrLandingPage() {
               <a href="#next-live">Next Live</a>
               <a href="#follow">Follow</a>
             </div>
+
+            <div className="aym-logo-wrap">
+              <img src={logo} alt="ASAKIYUMEMISHI logo" className="aym-logo" />
+            </div>
+
             <span className="aym-badge">Flyer Limited Page</span>
-            <h1 className="aym-title">ASAKIYUMEMISHI</h1>
             <p className="aym-lead">
               フライヤーを受け取ってくれてありがとうございます。
               このページは、ライブ会場で出会ってくれた方のための限定ページです。
