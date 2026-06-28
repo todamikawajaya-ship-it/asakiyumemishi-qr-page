@@ -8,16 +8,43 @@ export default function AsakiyumemishiQrLandingPage() {
       title: "ショウゲキノカラ",
       description: "ライブで引っかかった方に、まず触れてほしい代表的な1曲。",
       href: "https://www.youtube.com/watch?v=isg9fBgeHp8",
+      cardStyle: {
+        background: "linear-gradient(180deg, #ffffff 0%, #fff7fb 100%)",
+        border: "1px solid #fbcfe8",
+      },
+      kickerStyle: { color: "#c026d3" },
+      buttonStyle: {
+        background: "#fce7f3",
+        color: "#db2777",
+      },
     },
     {
       title: "SUPER NOTHING",
       description: "深夜の焦燥と衝動をそのまま鳴らした最新リリース。",
-      href: "#",
+      href: "https://www.youtube.com/watch?v=b9-wYBphMXo",
+      cardStyle: {
+        background: "linear-gradient(180deg, #ffffff 0%, #f7fee7 100%)",
+        border: "1px solid #d9f99d",
+      },
+      kickerStyle: { color: "#65a30d" },
+      buttonStyle: {
+        background: "#ecfccb",
+        color: "#65a30d",
+      },
     },
     {
-      title: "Epic Summer",
-      description: "メロディと空気感から入りやすい、入口向きの1曲。",
-      href: "#",
+      title: "アサキユメミシ",
+      description: "バンド名を冠した、ASAKIYUMEMISHIの空気感をまっすぐ感じられる1曲。",
+      href: "https://www.youtube.com/watch?v=PcIzbDVqys8&list=RDPcIzbDVqys8&start_radio=1",
+      cardStyle: {
+        background: "linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%)",
+        border: "1px solid #bae6fd",
+      },
+      kickerStyle: { color: "#0284c7" },
+      buttonStyle: {
+        background: "#e0f2fe",
+        color: "#0284c7",
+      },
     },
   ];
 
@@ -255,11 +282,15 @@ export default function AsakiyumemishiQrLandingPage() {
           font-weight: 900;
         }
         .aym-song-link {
-          display: inline-block;
-          margin-top: 12px;
-          color: #f97316;
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          margin-top: 14px;
           font-size: 14px;
           font-weight: 800;
+          padding: 10px 14px;
+          border-radius: 999px;
+          text-decoration: none;
         }
         .aym-footer {
           text-align: center;
@@ -342,11 +373,18 @@ export default function AsakiyumemishiQrLandingPage() {
             </p>
             <div className="aym-grid">
               {songs.map((song, index) => (
-                <a key={song.title} href={song.href} target="_blank" rel="noreferrer" className="aym-song">
-                  <div className="aym-song-kicker">Track 0{index + 1}</div>
+                <a
+                  key={song.title}
+                  href={song.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="aym-song"
+                  style={song.cardStyle}
+                >
+                  <div className="aym-song-kicker" style={song.kickerStyle}>Track 0{index + 1}</div>
                   <h3 className="aym-song-title">{song.title}</h3>
                   <p className="aym-text">{song.description}</p>
-                  <span className="aym-song-link">聴いてみる →</span>
+                  <span className="aym-song-link" style={song.buttonStyle}>聴いてみる →</span>
                 </a>
               ))}
             </div>
@@ -365,18 +403,29 @@ export default function AsakiyumemishiQrLandingPage() {
 
           <section id="next-live" className="aym-card aym-section">
             <div className="aym-kicker">Next Live</div>
-            <h2 className="aym-h2">次に来るならこの日がおすすめです</h2>
-            <div className="aym-inner-card">
-              <div style={{ fontSize: 15, color: '#71717a', fontWeight: 700 }}>2026/05/29 (Fri)</div>
-              <h3 className="aym-song-title" style={{ fontSize: 32, marginTop: 10 }}>名古屋 栄R.A.D</h3>
-              <p className="aym-text">
-                気になった方がもう一度観に来る入口として案内しやすい日です。ライブ情報は公式サイトでもまとめて見られます。
-              </p>
-              <div style={{ marginTop: 18 }}>
-                <a href="https://asakiyumemishi.ryzm.jp/live" target="_blank" rel="noreferrer" className="aym-btn-secondary">
-                  LIVE情報を見る
-                </a>
+            <h2 className="aym-h2">次に来るならこの2本がおすすめです</h2>
+            <div className="aym-grid" style={{ marginTop: 16 }}>
+              <div className="aym-inner-card">
+                <div style={{ fontSize: 15, color: '#71717a', fontWeight: 700 }}>2026/07/02</div>
+                <h3 className="aym-song-title" style={{ fontSize: 30, marginTop: 10 }}>名古屋 Club Zion</h3>
+                <p className="aym-text">
+                  名古屋でASAKIYUMEMISHIをもう一度観たい方におすすめの1本。気になった熱の続きを体感しやすい日です。
+                </p>
               </div>
+
+              <div className="aym-inner-card">
+                <div style={{ fontSize: 15, color: '#71717a', fontWeight: 700 }}>2026/08/14</div>
+                <h3 className="aym-song-title" style={{ fontSize: 30, marginTop: 10 }}>豊橋 club KNOT</h3>
+                <p className="aym-text">
+                  豊橋でライブハウスの距離感ごと楽しみたい方におすすめの1本。ASAKIYUMEMISHIの空気感をより近くで感じやすい日です。
+                </p>
+              </div>
+            </div>
+
+            <div style={{ marginTop: 18 }}>
+              <a href="https://asakiyumemishi.ryzm.jp/live" target="_blank" rel="noreferrer" className="aym-btn-secondary">
+                LIVE情報を見る
+              </a>
             </div>
           </section>
 
