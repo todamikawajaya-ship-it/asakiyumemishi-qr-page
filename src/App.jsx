@@ -5,23 +5,23 @@ export default function AsakiyumemishiQrLandingPage() {
 
   const songs = [
     {
-      title: "ショウゲキノカラ",
-      description: "ライブで引っかかった方に、まず触れてほしい代表的な1曲。",
-      href: "https://www.youtube.com/watch?v=isg9fBgeHp8",
+      title: "Home Sweet Home",
+      description: "今のASAKIYUMEMISHIを知るなら、まずこの曲。男女ボーカルと、まっすぐで温かなメロディが重なる最新曲。",
+      href: "https://www.youtube.com/watch?v=xaRBUh6sFl8",
       cardStyle: {
-        background: "linear-gradient(180deg, #ffffff 0%, #fff7fb 100%)",
-        border: "1px solid #fbcfe8",
+        background: "linear-gradient(180deg, #ffffff 0%, #fff7ed 100%)",
+        border: "1px solid #fed7aa",
       },
-      kickerStyle: { color: "#c026d3" },
+      kickerStyle: { color: "#ea580c" },
       buttonStyle: {
-        background: "#fce7f3",
-        color: "#db2777",
+        background: "#ffedd5",
+        color: "#c2410c",
       },
     },
     {
-      title: "SUPER NOTHING",
-      description: "深夜の焦燥と衝動をそのまま鳴らした最新リリース。",
-      href: "https://www.youtube.com/watch?v=b9-wYBphMXo",
+      title: "アサキユメミシ",
+      description: "バンド名を冠した、ASAKIYUMEMISHIの核と空気感をまっすぐ感じられる1曲。",
+      href: "https://www.youtube.com/watch?v=PcIzbDVqys8&list=RDPcIzbDVqys8&start_radio=1",
       cardStyle: {
         background: "linear-gradient(180deg, #ffffff 0%, #f7fee7 100%)",
         border: "1px solid #d9f99d",
@@ -33,9 +33,9 @@ export default function AsakiyumemishiQrLandingPage() {
       },
     },
     {
-      title: "アサキユメミシ",
-      description: "バンド名を冠した、ASAKIYUMEMISHIの空気感をまっすぐ感じられる1曲。",
-      href: "https://www.youtube.com/watch?v=PcIzbDVqys8&list=RDPcIzbDVqys8&start_radio=1",
+      title: "ショウゲキノカラ",
+      description: "ライブの熱量と勢いを感じてほしい、ASAKIYUMEMISHIの代表曲。",
+      href: "https://www.youtube.com/watch?v=isg9fBgeHp8",
       cardStyle: {
         background: "linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%)",
         border: "1px solid #bae6fd",
@@ -321,6 +321,7 @@ export default function AsakiyumemishiQrLandingPage() {
               <a href="https://asakiyumemishi.ryzm.jp/">Home</a>
               <a href="#benefit">Limited</a>
               <a href="#songs">Music</a>
+              <a href="#now">Now</a>
               <a href="#next-live">Next Live</a>
               <a href="#follow">Follow</a>
             </div>
@@ -332,12 +333,12 @@ export default function AsakiyumemishiQrLandingPage() {
             <span className="aym-badge">Flyer Limited Page</span>
             <p className="aym-lead">
               フライヤーを受け取ってくれてありがとうございます。
-              このページは、ライブ会場で出会ってくれた方のための限定ページです。
-              気になった曲、次に来るならおすすめの日、そして会場限定コンテンツをまとめました。
+              最新曲「Home Sweet Home」、会場限定コンテンツ、そして次に観てほしいライブをまとめました。
+              今日気になってくれた方は、まずここからどうぞ。
             </p>
             <div className="aym-button-row">
-              <a href="#benefit" className="aym-btn-primary">限定コンテンツを見る</a>
-              <a href="#songs" className="aym-btn-secondary">まず聴いてほしい3曲へ</a>
+              <a href="https://www.youtube.com/watch?v=xaRBUh6sFl8" target="_blank" rel="noreferrer" className="aym-btn-primary">Home Sweet Home MVを見る</a>
+              <a href="#benefit" className="aym-btn-secondary">会場限定コンテンツへ</a>
             </div>
           </header>
 
@@ -390,6 +391,25 @@ export default function AsakiyumemishiQrLandingPage() {
             </div>
           </section>
 
+          <section id="now" className="aym-card aym-section">
+            <div className="aym-kicker">Now Topics</div>
+            <h2 className="aym-h2">いまのASAKIYUMEMISHI</h2>
+            <p className="aym-text" style={{ marginTop: 12 }}>
+              New Single「Home Sweet Home」配信・フィジカル発売中。主要音楽配信サービスやAWAの公式プレイリストにも掲載されています。
+            </p>
+            <div className="aym-inner-card">
+              <p className="aym-text">Apple Music「J ROCK New Star」</p>
+              <p className="aym-text" style={{ marginTop: 6 }}>YouTube Music「New J-Rock」</p>
+              <p className="aym-text" style={{ marginTop: 6 }}>Spotify「J-Rock Newcomer」</p>
+              <p className="aym-text" style={{ marginTop: 6 }}>AWA公式プレイリスト2作品</p>
+            </div>
+            <div style={{ marginTop: 18 }}>
+              <a href="https://asakiyumemishi.ryzm.jp/" target="_blank" rel="noreferrer" className="aym-btn-secondary">
+                最新NEWSを見る
+              </a>
+            </div>
+          </section>
+
           <section className="aym-card aym-section">
             <div className="aym-kicker">About</div>
             <h2 className="aym-h2">ASAKIYUMEMISHIについて</h2>
@@ -403,21 +423,21 @@ export default function AsakiyumemishiQrLandingPage() {
 
           <section id="next-live" className="aym-card aym-section">
             <div className="aym-kicker">Next Live</div>
-            <h2 className="aym-h2">次に来るならこの2本がおすすめです</h2>
+            <h2 className="aym-h2">次に来るなら、この2本</h2>
             <div className="aym-grid" style={{ marginTop: 16 }}>
               <div className="aym-inner-card">
-                <div style={{ fontSize: 15, color: '#71717a', fontWeight: 700 }}>2026/07/02</div>
-                <h3 className="aym-song-title" style={{ fontSize: 30, marginTop: 10 }}>名古屋 Club Zion</h3>
+                <div style={{ fontSize: 15, color: '#71717a', fontWeight: 700 }}>2026/08/14 (Fri)</div>
+                <h3 className="aym-song-title" style={{ fontSize: 30, marginTop: 10 }}>豊橋 club KNOT</h3>
                 <p className="aym-text">
-                  名古屋でASAKIYUMEMISHIをもう一度観たい方におすすめの1本。気になった熱の続きを体感しやすい日です。
+                  ASAKIYUMEMISHIの活動拠点・豊橋で、ライブハウスの距離感ごと楽しんでほしい1本です。
                 </p>
               </div>
 
               <div className="aym-inner-card">
-                <div style={{ fontSize: 15, color: '#71717a', fontWeight: 700 }}>2026/08/14</div>
+                <div style={{ fontSize: 15, color: '#71717a', fontWeight: 700 }}>2026/10/11 (Sun)</div>
                 <h3 className="aym-song-title" style={{ fontSize: 30, marginTop: 10 }}>豊橋 club KNOT</h3>
                 <p className="aym-text">
-                  豊橋でライブハウスの距離感ごと楽しみたい方におすすめの1本。ASAKIYUMEMISHIの空気感をより近くで感じやすい日です。
+                  SABOTEN「Dessert in Desert」TOUR 豊橋公演。ASAKIYUMEMISHIを次に観る一本として、特におすすめのライブです。
                 </p>
               </div>
             </div>
