@@ -1,23 +1,33 @@
-# ASAKIYUMEMISHI QR Page
+# ASAKIYUMEMISHI QR Limited Page v2.1
 
-Vercel Hobby + GA4 前提の、フライヤー限定ページ用 React / Vite プロジェクトです。
+ライブ会場フライヤーQR用ランディングページ。
 
-## 使い方
+## v2.1 更新内容
+- Home Sweet Home を最上位CTAに配置
+- 会場限定Google Drive導線
+- おすすめ3曲：Home Sweet Home / アサキユメミシ / ショウゲキノカラ
+- NOW TOPICS追加
+- おすすめライブ：2026/10/11 豊橋club KNOT SABOTEN「Dessert in Desert」TOUR
+- スマホUI最適化
+- GA4カスタムイベント計測
 
-1. `.env.example` を参考に、Vercel の環境変数 `VITE_GA_MEASUREMENT_ID` に GA4 の測定IDを設定
-2. GitHub にアップロード
-3. Vercel で Import して Deploy
+## GA4
+Vercel Environment Variables に以下を設定してください。
 
-## ローカル起動
+- Key: `VITE_GA_MEASUREMENT_ID`
+- Value: GA4の `G-XXXXXXXXXX`
 
-```bash
-npm install
-npm run dev
-```
+現在使用中の測定IDを継続する場合、Vercel側の既存環境変数はそのままでOKです。
 
-## 編集ポイント
-
-- 曲リンク: `src/App.jsx` の `songs`
-- SNSリンク: `src/App.jsx` の `socials`
-- セトリ: `src/App.jsx` の `setlist`
-- 次回ライブ情報: `src/App.jsx` の `next-live` セクション本文
+### 主なカスタムイベント
+- `click_mv`
+- `click_drive`
+- `click_song`
+- `click_streaming`
+- `click_live`
+- `click_instagram`
+- `click_youtube`
+- `click_tiktok`
+- `click_x`
+- `click_official`
+- `click_topic`
