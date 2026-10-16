@@ -1,13 +1,15 @@
-# ASAKIYUMEMISHI QR Limited Page v2.1
+# ASAKIYUMEMISHI QR Limited Page v2.3
 
 ライブ会場フライヤーQR用ランディングページ。
 
-## v2.1 更新内容
+## v2.3 更新内容
 - Home Sweet Home を最上位CTAに配置
 - 会場限定Google Drive導線
 - おすすめ3曲：Home Sweet Home / アサキユメミシ / ショウゲキノカラ
 - NOW TOPICS追加
-- おすすめライブ：2026/10/11 豊橋club KNOT SABOTEN「Dessert in Desert」TOUR
+- おすすめライブ：2026/11/01 安城RADIO CLUB「FL▲G presents.『11 / 1 / 11』ANJO RADIO CLUB 11th ANNIVERSARY」。公式の個別ライブ詳細ページへ直接リンク
+- 水都音楽祭2026を「出演済み・グランプリ獲得」に更新
+- 2026/10/19 21:00〜 Mudia「sonar-u community」1時間生配信のトピックと公式イベントリンク
 - スマホUI最適化
 - GA4カスタムイベント計測
 
@@ -31,3 +33,4 @@ Vercel Environment Variables に以下を設定してください。
 - `click_x`
 - `click_official`
 - `click_topic`
+- `click_sonar`

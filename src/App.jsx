@@ -15,7 +15,9 @@ export default function AsakiyumemishiQrLandingPage() {
     youtube: 'https://www.youtube.com/@AYM0716BAND',
     tiktok: 'https://www.tiktok.com/@aym0716band',
     official: 'https://asakiyumemishi.ryzm.jp/',
-    live: 'https://asakiyumemishi.ryzm.jp/news/0e715bdb-1c41-458b-bd43-aac4fcb2eb12',
+    live: 'https://asakiyumemishi.ryzm.jp/live/40557bc1-70f1-4164-a3f2-1a5618267c05',
+    sonar: 'https://mudia.tv/event/4041',
+    suito: 'https://asakiyumemishi.ryzm.jp/news',
     playlistNews: 'https://asakiyumemishi.ryzm.jp/news/eb563477-3106-424f-9c02-cf21c81cfee4',
     awaNews: 'https://asakiyumemishi.ryzm.jp/news/9066bdc8-59b8-4e67-bfe8-73a690c4d0dc',
     radioNews: 'https://asakiyumemishi.ryzm.jp/medianews/b89169df-4648-4dcf-abd9-913791bddf2f',
@@ -62,7 +64,8 @@ export default function AsakiyumemishiQrLandingPage() {
   ]
 
   const topics = [
-    { icon: '🏆', title: '水都音楽祭2026 FINAL', text: 'オンラインオーディション、いよいよFINALへ。' },
+    { icon: '📺', title: '10/19(月) 21:00〜 生配信出演！', text: 'Mudia「sonar-u community」にASAKIYUMEMISHIがゲスト出演！1時間たっぷり、バンドの音楽や活動について話します。無料で視聴できます。', href: links.sonar, event: 'click_sonar' },
+    { icon: '🏆', title: '水都音楽祭2026 メインステージ出演！', text: 'オンラインオーディションでグランプリを獲得し、9/20に大阪・枚方のメインステージへ出演しました！たくさんの応援、ありがとうございました。', href: links.suito },
     { icon: '🎧', title: '公式プレイリスト掲載', text: 'Apple Music / YouTube Music / Spotifyに「Home Sweet Home」が掲載。', href: links.playlistNews },
     { icon: '✨', title: 'AWA公式 2プレイリスト', text: 'J-ROCK・邦楽の新着曲プレイリストに同時掲載。', href: links.awaNews },
     { icon: '📻', title: 'ZIP-FM「FIND OUT」', text: '「Home Sweet Home」をオンエア＆MVも紹介していただきました。', href: links.radioNews },
@@ -242,7 +245,7 @@ export default function AsakiyumemishiQrLandingPage() {
                   </div>
                 )
                 return topic.href ? (
-                  <a key={topic.title} className="topic" {...trackedHref('click_topic', topic.href, { topic: topic.title })}>{content}</a>
+                  <a key={topic.title} className="topic" {...trackedHref(topic.event || 'click_topic', topic.href, { topic: topic.title })}>{content}</a>
                 ) : (
                   <div key={topic.title} className="topic">{content}</div>
                 )
@@ -252,15 +255,19 @@ export default function AsakiyumemishiQrLandingPage() {
 
           <section id="next-live" className="surface section">
             <div className="kicker">Next Recommended Live</div>
-            <h2 className="h2">次に観るなら、この日。</h2>
+            <h2 className="h2">次に観るなら、11/1の安城！</h2>
             <div className="live">
               <span className="live-badge">SPECIAL LIVE</span>
-              <div className="live-date">2026.10.11 SUN</div>
-              <h3 className="live-title">豊橋club KNOT</h3>
-              <p className="live-tour">SABOTEN「Dessert in Desert」TOUR</p>
-              <div className="live-meta">OPEN 17:00 / START 17:30<br />出演：SABOTEN / LOOSELY / THE BOOGIE JACK / ASAKIYUMEMISHI</div>
+              <div className="live-date">2026.11.01 SUN</div>
+              <h3 className="live-title">安城RADIO CLUB</h3>
+              <p className="live-tour">FL▲G presents.「11 / 1 / 11」<br />ANJO RADIO CLUB 11th ANNIVERSARY</p>
+              <div className="live-meta">
+                <strong>OPEN 16:00 / START 16:30</strong><br />
+                前売 ¥2,500 / 当日 ¥3,000 / 学割 ¥1,000<br />
+                <span className="live-acts">出演：me/we / ASAKIYUMEMISHI / HiLL / UnGifted / 00 / FL▲G</span>
+              </div>
               <div className="cta-stack">
-                <a className="btn btn-main" {...trackedHref('click_live', links.live, { live_date: '2026-10-11', venue: '豊橋club KNOT' })}>🎸 公演詳細を見る</a>
+                <a className="btn btn-main" {...trackedHref('click_live', links.live, { live_date: '2026-11-01', venue: '安城RADIO CLUB', link_type: 'official_live_detail' })}>🎸 11/1公演の詳細を見る</a>
               </div>
             </div>
           </section>
