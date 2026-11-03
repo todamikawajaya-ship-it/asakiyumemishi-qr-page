@@ -1,15 +1,15 @@
-# ASAKIYUMEMISHI QR Limited Page v2.3
+# ASAKIYUMEMISHI QR Limited Page v2.4
 
 ライブ会場フライヤーQR用ランディングページ。
 
-## v2.3 更新内容
+## v2.4 更新内容
 - Home Sweet Home を最上位CTAに配置
 - 会場限定Google Drive導線
 - おすすめ3曲：Home Sweet Home / アサキユメミシ / ショウゲキノカラ
 - NOW TOPICS追加
-- おすすめライブ：2026/11/01 安城RADIO CLUB「FL▲G presents.『11 / 1 / 11』ANJO RADIO CLUB 11th ANNIVERSARY」。公式の個別ライブ詳細ページへ直接リンク
+- おすすめライブ：2026/12/06 豊田 LIVEHOUSE umi7「LIVEHOUSE umi7×鈴鹿ANSWER 交換企画 -DREAMS INTO REALITY-」。公式の個別ライブ詳細・予約ページへ直接リンク
 - 水都音楽祭2026を「出演済み・グランプリ獲得」に更新
-- 2026/10/19 21:00〜 Mudia「sonar-u community」1時間生配信のトピックと公式イベントリンク
+- 2026/10/19 Mudia「sonar-u community」1時間生配信の出演報告と公式イベントリンク
 - スマホUI最適化
 - GA4カスタムイベント計測
 
